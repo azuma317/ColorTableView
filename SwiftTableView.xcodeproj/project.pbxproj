@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		75F1AD172092B2370066B794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD162092B2370066B794 /* AppDelegate.swift */; };
-		75F1AD192092B2370066B794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD182092B2370066B794 /* ViewController.swift */; };
 		75F1AD1C2092B2370066B794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F1AD1A2092B2370066B794 /* Main.storyboard */; };
 		75F1AD1E2092B2390066B794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F1AD1D2092B2390066B794 /* Assets.xcassets */; };
 		75F1AD212092B2390066B794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F1AD1F2092B2390066B794 /* LaunchScreen.storyboard */; };
+		75F1AD292092B4180066B794 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD282092B4180066B794 /* TableViewController.swift */; };
+		75F1AD2B2092B4210066B794 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD2A2092B4210066B794 /* Color.swift */; };
+		75F1AD2D2092B4310066B794 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD2C2092B4310066B794 /* TableViewCell.swift */; };
+		75F1AD2F2092B4740066B794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD2E2092B4740066B794 /* ViewController.swift */; };
+		75F1AD352092B6D50066B794 /* color.json in Resources */ = {isa = PBXBuildFile; fileRef = 75F1AD342092B6D50066B794 /* color.json */; };
+		75F1AD37209353700066B794 /* ColorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD36209353700066B794 /* ColorStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		75F1AD132092B2370066B794 /* SwiftTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F1AD162092B2370066B794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75F1AD182092B2370066B794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75F1AD1B2092B2370066B794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75F1AD1D2092B2390066B794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F1AD202092B2390066B794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75F1AD222092B2390066B794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F1AD282092B4180066B794 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		75F1AD2A2092B4210066B794 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		75F1AD2C2092B4310066B794 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		75F1AD2E2092B4740066B794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75F1AD342092B6D50066B794 /* color.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = color.json; sourceTree = "<group>"; };
+		75F1AD36209353700066B794 /* ColorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,34 @@
 			isa = PBXGroup;
 			children = (
 				75F1AD162092B2370066B794 /* AppDelegate.swift */,
-				75F1AD182092B2370066B794 /* ViewController.swift */,
+				75F1AD302092B47A0066B794 /* ViewController */,
+				75F1AD312092B4880066B794 /* Model */,
 				75F1AD1A2092B2370066B794 /* Main.storyboard */,
 				75F1AD1D2092B2390066B794 /* Assets.xcassets */,
 				75F1AD1F2092B2390066B794 /* LaunchScreen.storyboard */,
 				75F1AD222092B2390066B794 /* Info.plist */,
+				75F1AD342092B6D50066B794 /* color.json */,
 			);
 			path = SwiftTableView;
+			sourceTree = "<group>";
+		};
+		75F1AD302092B47A0066B794 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				75F1AD2E2092B4740066B794 /* ViewController.swift */,
+				75F1AD282092B4180066B794 /* TableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		75F1AD312092B4880066B794 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75F1AD2C2092B4310066B794 /* TableViewCell.swift */,
+				75F1AD2A2092B4210066B794 /* Color.swift */,
+				75F1AD36209353700066B794 /* ColorStore.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75F1AD212092B2390066B794 /* LaunchScreen.storyboard in Resources */,
+				75F1AD352092B6D50066B794 /* color.json in Resources */,
 				75F1AD1E2092B2390066B794 /* Assets.xcassets in Resources */,
 				75F1AD1C2092B2370066B794 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F1AD192092B2370066B794 /* ViewController.swift in Sources */,
+				75F1AD37209353700066B794 /* ColorStore.swift in Sources */,
+				75F1AD2F2092B4740066B794 /* ViewController.swift in Sources */,
 				75F1AD172092B2370066B794 /* AppDelegate.swift in Sources */,
+				75F1AD2D2092B4310066B794 /* TableViewCell.swift in Sources */,
+				75F1AD292092B4180066B794 /* TableViewController.swift in Sources */,
+				75F1AD2B2092B4210066B794 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
