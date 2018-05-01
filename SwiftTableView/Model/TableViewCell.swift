@@ -29,13 +29,13 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configre(color: Color) {
+    func configre(color: RealmColor) {
         self.name.text = color.name
-        self.hex.text = "Hex:" + color.hex!
-        self.r.text = "R:" + String(color.r!)
-        self.g.text = "G:" + String(color.g!)
-        self.b.text = "B:" + String(color.b!)
-        self.color.backgroundColor = UIColor(red: CGFloat(color.r!)/255, green: CGFloat(color.g!)/255, blue: CGFloat(color.b!)/255, alpha: 1.0)
+        self.hex.text = "Hex:" + color.hex
+        self.r.text = "R:" + String(color.r)
+        self.g.text = "G:" + String(color.g)
+        self.b.text = "B:" + String(color.b)
+        self.color.backgroundColor = UIColor(red: CGFloat(color.r)/255, green: CGFloat(color.g)/255, blue: CGFloat(color.b)/255, alpha: 1.0)
     }
 
 }

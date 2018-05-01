@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750B765920985F0C00F775E5 /* RealmColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750B765820985F0C00F775E5 /* RealmColor.swift */; };
+		750B765B20985FDC00F775E5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750B765A20985FDC00F775E5 /* APIClient.swift */; };
 		75F1AD172092B2370066B794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD162092B2370066B794 /* AppDelegate.swift */; };
 		75F1AD1C2092B2370066B794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F1AD1A2092B2370066B794 /* Main.storyboard */; };
 		75F1AD1E2092B2390066B794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F1AD1D2092B2390066B794 /* Assets.xcassets */; };
@@ -16,10 +18,13 @@
 		75F1AD2D2092B4310066B794 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD2C2092B4310066B794 /* TableViewCell.swift */; };
 		75F1AD2F2092B4740066B794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD2E2092B4740066B794 /* ViewController.swift */; };
 		75F1AD352092B6D50066B794 /* color.json in Resources */ = {isa = PBXBuildFile; fileRef = 75F1AD342092B6D50066B794 /* color.json */; };
-		75F1AD37209353700066B794 /* ColorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F1AD36209353700066B794 /* ColorStore.swift */; };
+		9E29A843834EE9C64EC67090 /* Pods_SwiftTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB321D57A7CD2BF4CB3C734 /* Pods_SwiftTableView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4AC62645E49E205AD05F3E0B /* Pods-SwiftTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTableView/Pods-SwiftTableView.release.xcconfig"; sourceTree = "<group>"; };
+		750B765820985F0C00F775E5 /* RealmColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmColor.swift; sourceTree = "<group>"; };
+		750B765A20985FDC00F775E5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		75F1AD132092B2370066B794 /* SwiftTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F1AD162092B2370066B794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75F1AD1B2092B2370066B794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,7 +36,8 @@
 		75F1AD2C2092B4310066B794 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		75F1AD2E2092B4740066B794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75F1AD342092B6D50066B794 /* color.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = color.json; sourceTree = "<group>"; };
-		75F1AD36209353700066B794 /* ColorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStore.swift; sourceTree = "<group>"; };
+		90540BDD3CB552BEB38F1776 /* Pods-SwiftTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTableView/Pods-SwiftTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		CBB321D57A7CD2BF4CB3C734 /* Pods_SwiftTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E29A843834EE9C64EC67090 /* Pods_SwiftTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A4CF8E2B065CC24040186D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBB321D57A7CD2BF4CB3C734 /* Pods_SwiftTableView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		750B765720985EE700F775E5 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				750B765820985F0C00F775E5 /* RealmColor.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
 		75F1AD0A2092B2370066B794 = {
 			isa = PBXGroup;
 			children = (
 				75F1AD152092B2370066B794 /* SwiftTableView */,
 				75F1AD142092B2370066B794 /* Products */,
+				D275DFE7BD3062543210E8DF /* Pods */,
+				4A4CF8E2B065CC24040186D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +91,7 @@
 			children = (
 				75F1AD162092B2370066B794 /* AppDelegate.swift */,
 				75F1AD302092B47A0066B794 /* ViewController */,
+				750B765720985EE700F775E5 /* RealmModel */,
 				75F1AD312092B4880066B794 /* Model */,
 				75F1AD1A2092B2370066B794 /* Main.storyboard */,
 				75F1AD1D2092B2390066B794 /* Assets.xcassets */,
@@ -90,9 +116,18 @@
 			children = (
 				75F1AD2C2092B4310066B794 /* TableViewCell.swift */,
 				75F1AD2A2092B4210066B794 /* Color.swift */,
-				75F1AD36209353700066B794 /* ColorStore.swift */,
+				750B765A20985FDC00F775E5 /* APIClient.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D275DFE7BD3062543210E8DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90540BDD3CB552BEB38F1776 /* Pods-SwiftTableView.debug.xcconfig */,
+				4AC62645E49E205AD05F3E0B /* Pods-SwiftTableView.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75F1AD252092B2390066B794 /* Build configuration list for PBXNativeTarget "SwiftTableView" */;
 			buildPhases = (
+				C60E0CEBB9D5EEF4FFC7E603 /* [CP] Check Pods Manifest.lock */,
 				75F1AD0F2092B2370066B794 /* Sources */,
 				75F1AD102092B2370066B794 /* Frameworks */,
 				75F1AD112092B2370066B794 /* Resources */,
+				965413E465ABA2F83A9A9CD8 /* [CP] Embed Pods Frameworks */,
+				2BB8C22E55B0F352F86AFACD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,17 +200,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BB8C22E55B0F352F86AFACD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftTableView/Pods-SwiftTableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		965413E465ABA2F83A9A9CD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftTableView/Pods-SwiftTableView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftTableView/Pods-SwiftTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C60E0CEBB9D5EEF4FFC7E603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftTableView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75F1AD0F2092B2370066B794 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F1AD37209353700066B794 /* ColorStore.swift in Sources */,
 				75F1AD2F2092B4740066B794 /* ViewController.swift in Sources */,
 				75F1AD172092B2370066B794 /* AppDelegate.swift in Sources */,
+				750B765B20985FDC00F775E5 /* APIClient.swift in Sources */,
 				75F1AD2D2092B4310066B794 /* TableViewCell.swift in Sources */,
 				75F1AD292092B4180066B794 /* TableViewController.swift in Sources */,
 				75F1AD2B2092B4210066B794 /* Color.swift in Sources */,
+				750B765920985F0C00F775E5 /* RealmColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +409,7 @@
 		};
 		75F1AD262092B2390066B794 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90540BDD3CB552BEB38F1776 /* Pods-SwiftTableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -332,6 +428,7 @@
 		};
 		75F1AD272092B2390066B794 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AC62645E49E205AD05F3E0B /* Pods-SwiftTableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

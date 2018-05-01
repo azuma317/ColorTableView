@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TableViewController: UITableViewController {
     
-    var colors: [Color] = []
-    var color: Color?
+    var colors: Results<RealmColor>?
+    var color: RealmColor?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let realm = try! Realm()
+        let colors = realm.objects(RealmColor.self)
+        self.colors = colors
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,25 +28,32 @@ class TableViewController: UITableViewController {
     }
     
     private func requestColors() {
-        ColorStore.requestColor { [weak weakSelf = self](result) in
+        APIClient.requestColor { [weak weakSelf = self](result) in
             switch result {
             case .success(let resultColor):
-                weakSelf?.colors = resultColor
+                RealmColor.addColor(colorJSONs: resultColor)
                 weakSelf?.tableView.reloadData()
             case .failure(let error):
-                print(error)
+                let alert = UIAlertController(title: error.localizedDescription,
+                                              message: (error as NSError).localizedFailureReason,
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK!", style: .default))
+                weakSelf?.present(alert, animated: true)
             }
         }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return colors.count
+        return colors?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         
-        cell.configre(color: colors[indexPath.item])
+        if let colors = colors {
+            let color = colors[indexPath.item]
+            cell.configre(color: color)
+        }
 
         return cell
     }
@@ -51,7 +63,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        color = colors[indexPath.item]
+        color = colors?[indexPath.item]
         performSegue(withIdentifier: "ColorSegue", sender: nil)
     }
 
