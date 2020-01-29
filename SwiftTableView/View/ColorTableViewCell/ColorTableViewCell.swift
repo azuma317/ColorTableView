@@ -1,12 +1,12 @@
 //
-//  Color.swift
+//  ColorTableViewCell.swift
 //  SwiftTableView
 //
 //  Created by AzumaSato on 2020/01/29.
 //  Copyright © 2020 Azuma. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class Color {
+class ColorTableViewCell: UITableViewCell {
 }
