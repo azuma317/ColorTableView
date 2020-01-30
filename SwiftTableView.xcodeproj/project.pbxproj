@@ -70,6 +70,7 @@
 				75F1AD302092B47A0066B794 /* ViewController */,
 				75F1AD312092B4880066B794 /* Model */,
 				F200B80523E1C6480007B96B /* View */,
+				F200B81123E320490007B96B /* Store */,
 				75F1AD1A2092B2370066B794 /* Main.storyboard */,
 				75F1AD1D2092B2390066B794 /* Assets.xcassets */,
 				75F1AD1F2092B2390066B794 /* LaunchScreen.storyboard */,
@@ -92,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				F200B80F23E1C8620007B96B /* Color.swift */,
-				75F1AD36209353700066B794 /* ColorStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,6 +112,14 @@
 				F200B80823E1C6D10007B96B /* ColorTableViewCell.xib */,
 			);
 			path = ColorTableViewCell;
+			sourceTree = "<group>";
+		};
+		F200B81123E320490007B96B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				75F1AD36209353700066B794 /* ColorStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWW3CV2X72;
 				INFOPLIST_FILE = SwiftTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWW3CV2X72;
 				INFOPLIST_FILE = SwiftTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

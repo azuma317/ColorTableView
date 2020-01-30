@@ -9,4 +9,6 @@
 import UIKit
 
 class ColorTableViewCell: UITableViewCell {
+    @IBOutlet weak var colorNameLabel: UILabel!
+    @IBOutlet weak var colorView: UIView!
 }

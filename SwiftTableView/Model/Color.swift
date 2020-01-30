@@ -8,5 +8,8 @@
 
 import Foundation
 
-class Color {
+struct Color: Codable {
+    let hex: String
+    let name: String
+    let rgb: [Int]
 }

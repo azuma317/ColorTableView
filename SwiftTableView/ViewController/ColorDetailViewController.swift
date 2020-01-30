@@ -10,6 +10,12 @@ import UIKit
 
 class ColorDetailViewController: UIViewController {
 
+    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var colorNameLabel: UILabel!
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
