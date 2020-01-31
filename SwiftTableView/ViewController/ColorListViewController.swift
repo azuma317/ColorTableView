@@ -10,16 +10,41 @@ import UIKit
 
 class ColorListViewController: UITableViewController {
 
+    var colors: [Color] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configure()
+        tableView.reloadData()
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+    func configure() {
+        tableView.register(UINib(nibName: "ColorTableViewCell", bundle: nil), forCellReuseIdentifier: "ColorTableViewCell")
+
+        ColorStore.requestColor { (result) in
+            switch result {
+            case .success(let colors):
+                self.colors = colors
+            case .failure(let error):
+                // エラー処理
+                print(error)
+            }
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return colors.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ColorTableViewCell", for: indexPath) as! ColorTableViewCell
+        cell.configure(colors[indexPath.item])
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 64.0
     }
 
 }
