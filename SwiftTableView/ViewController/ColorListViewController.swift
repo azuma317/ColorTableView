@@ -47,4 +47,11 @@ class ColorListViewController: UITableViewController {
         return 64.0
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let colorDetailViewController = storyboard.instantiateViewController(withIdentifier: "DetailView") as? ColorDetailViewController else { return }
+        colorDetailViewController.color = colors[indexPath.item]
+        self.navigationController?.pushViewController(colorDetailViewController, animated: true)
+    }
+
 }
